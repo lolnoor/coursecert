@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Completion Certificates</title>
+    <style>
+         html, body {
+            height: 100%; /* Ensure the body and HTML take full height */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+        }
+        body {
+            display: flex;
+            flex-direction: column; /* Use Flexbox on the body */
+        }
+        
+        header {
+            background: url('assets/header.png') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 20px;
+            text-align: left; /* Align text to the left */
+            position: relative;
+            height: 80px;
+        }
+        
+        header h1 {
+            margin: 3;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding-left: 20px; /* Add padding to move text away from the edge */
+        }
+        main {
+            flex: 1; /* Take up remaining space */
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container {
+            position: relative;
+            display: inline-block;
+            width: 90%; /* Adjust width as needed */
+            margin-right: 30px;
+            margin-bottom: 11px; /* Add margin between items */
+        }
+        .link {
+            text-decoration: none;
+            color: #02101f;
+            font-size: 17.5px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .certificate {
+            display: none;
+            position: absolute;
+            top: 100%; /* Position below the link */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%; /* Adjust width as needed */
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1; /* Ensure certificate is above other content */
+            background-color: white; /* Optional: add background color */
+            padding: 4px; /* Optional: add padding */
+            border-radius: 5px; /* Optional: add rounded corners */
+            text-align: center; /* Optional: center content */
+        }
+        .certificate img {
+            width: 100%; /* Ensure the image takes the full width of the .certificate container */
+            height: auto;
+        }
+        .container:hover .certificate {
+            display: block;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .list-item {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: rgb(8, 15, 58);
+            color: white;
+            text-align: left;
+            padding: 5px 20px; /* Adjust padding as needed */
+            width: 100%;
+            position: sticky; /* Stick to the bottom */
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const containers = document.querySelectorAll('.container');
+            containers.forEach(container => {
+                container.addEventListener('mouseover', function() {
+                    const certificate = container.querySelector('.certificate');
+                    const rect = certificate.getBoundingClientRect();
+                    if (rect.bottom > window.innerHeight) {
+                        certificate.style.top = 'auto';
+                        certificate.style.bottom = '100%';
+                        certificate.style.marginTop = '0';
+                        certificate.style.marginBottom = '10px';
+                    }
+                });
+                container.addEventListener('mouseout', function() {
+                    const certificate = container.querySelector('.certificate');
+                    certificate.style.top = '100%';
+                    certificate.style.bottom = 'auto';
+                    certificate.style.marginTop = '10px';
+                    certificate.style.marginBottom = '0';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Course Completion Certificates</h1>
+    </header>
+    <main>
+        <ul class="list">
+            <li class="list-item">
+                <div class="container">
+                    <a href="https://www.coursera.org/account/accomplishments/verify/Y5XCLCLUDZHM" class="link" target="_blank">Technical Support | Grade Achieved: 98.68% |Google</a>
+                    <div class="certificate">
+                        <img src="assets/TS.png" alt="Technical Support | Grade Achieved: 98.68% |Google">
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="container">
+                    <a href="https://www.coursera.org/account/accomplishments/verify/W8Q4H9NM9BTR" class="link">Build Random Forests in R with Azure ML Studio | Grade:100% | Coursera Project Network</a>
+                    <div class="certificate">
+                        <img src="assets/PN1.png" alt="Build Random Forests in R with Azure ML Studio | Grade:100% | Coursera Project Network">
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="container">
+                    <a href="https://www.coursera.org/account/accomplishments/verify/RGMNLLATQ7Z4" class="link">Introduction to Artificial Intelligence (AI) | Grade:86.11% | IBM</a>
+                    <div class="certificate">
+                        <img src="assets/AI.png" alt="Introduction to Artificial Intelligence (AI) | Grade:86.11% | IBM">
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="container">
+                    <a href="https://www.coursera.org/account/accomplishments/verify/LW7RXAEYEUB2" class="link">Generative AI: Introduction and Applications | Grade:100% | IBM</a>
+                    <div class="certificate">
+                        <img src="assets/GAI.png" alt="Generative AI: Introduction and Applications | Grade:100% | IBM">
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="container">
+                    <a href="https://www.coursera.org/account/accomplishments/verify/393488GHTB8P" class="link">Python for Data Science, AI & Development | Grade:97.75% | IBM</a>
+                    <div class="certificate">
+                        <img src="assets/PDS.png" alt="Python for Data Science, AI & Development | Grade:97.75% | IBM">
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="container">
+                    <a href="https://www.coursera.org/account/accomplishments/verify/72C492VWM6VQ" class="link">Python Project for Data Science | Grade:100% | IBM</a>
+                    <div class="certificate">
+                        <img src="assets/DS.png" alt="Python Project for Data Science">
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="container">
+                    <a href="https://www.coursera.org/account/accomplishments/verify/YLXRRGMT4XUD" class="link">Database Design with SQL Server Management Studio (SSMS) | Grade:100% | Coursera Project Network</a>
+                    <div class="certificate">
+                        <img src="assets/sql.png" alt="Database Design with SQL Server Management Studio (SSMS)">
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="container">
+                    <a href="https://www.coursera.org/account/accomplishments/verify/9FXVCAA5ZG6L" class="link">Introduction to Relational Database and SQL | Grade:100% | Coursera Project Network</a>
+                    <div class="certificate">
+                        <img src="assets/sqlinto.png" alt="Introduction to Relational Database and SQL">
+                    </div>
+                </div>
+            </li>
+           
+        </ul>
+    </main>
+    <footer>
+        NOOR FATIMA @2024
+    </footer>
+</body>
+</html>
