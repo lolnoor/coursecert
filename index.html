@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Completion Certificates</title>
     <style>
-         html, body {
-            height: 100%; /* Ensure the body and HTML take full height */
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -14,27 +14,25 @@
         }
         body {
             display: flex;
-            flex-direction: column; /* Use Flexbox on the body */
+            flex-direction: column;
         }
-        
         header {
             background: url('assets/header.png') no-repeat center center;
             background-size: cover;
             color: white;
             padding: 20px;
-            text-align: left; /* Align text to the left */
+            text-align: left;
             position: relative;
             height: 80px;
         }
-        
         header h1 {
-            margin: 3;
+            margin: 0;
             font-size: 36px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            padding-left: 20px; /* Add padding to move text away from the edge */
+            padding-left: 20px;
         }
         main {
-            flex: 1; /* Take up remaining space */
+            flex: 1;
             padding: 20px;
             display: flex;
             flex-wrap: wrap;
@@ -42,9 +40,9 @@
         .container {
             position: relative;
             display: inline-block;
-            width: 90%; /* Adjust width as needed */
+            width: 90%;
             margin-right: 30px;
-            margin-bottom: 11px; /* Add margin between items */
+            margin-bottom: 11px;
         }
         .link {
             text-decoration: none;
@@ -56,20 +54,20 @@
         .certificate {
             display: none;
             position: absolute;
-            top: 100%; /* Position below the link */
+            top: 100%;
             left: 50%;
             transform: translateX(-50%);
-            width: 60%; /* Adjust width as needed */
+            width: 60%;
             margin-top: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1; /* Ensure certificate is above other content */
-            background-color: white; /* Optional: add background color */
-            padding: 4px; /* Optional: add padding */
-            border-radius: 5px; /* Optional: add rounded corners */
-            text-align: center; /* Optional: center content */
+            z-index: 1;
+            background-color: white;
+            padding: 4px;
+            border-radius: 5px;
+            text-align: center;
         }
         .certificate img {
-            width: 100%; /* Ensure the image takes the full width of the .certificate container */
+            width: 100%;
             height: auto;
         }
         .container:hover .certificate {
@@ -78,7 +76,6 @@
         a:hover {
             text-decoration: underline;
         }
-        
         .list {
             list-style-type: none;
             padding: 0;
@@ -91,9 +88,9 @@
             background-color: rgb(8, 15, 58);
             color: white;
             text-align: left;
-            padding: 5px 20px; /* Adjust padding as needed */
+            padding: 5px 20px;
             width: 100%;
-            position: sticky; /* Stick to the bottom */
+            position: sticky;
             bottom: 0;
             left: 0;
         }
@@ -133,7 +130,7 @@
                 <div class="container">
                     <a href="https://www.coursera.org/account/accomplishments/verify/Y5XCLCLUDZHM" class="link" target="_blank">The Bits and Bytes of Computer Networking | Grade Achieved: 98.60% |Google</a>
                     <div class="certificate">
-                        <img src="assets/TS.png" alt="The Bits and Bytes of Computer Networking| Grade Achieved: 98.68% |Google">
+                        <img src="assets/TS.png" alt="The Bits and Bytes of Computer Networking | Grade Achieved: 98.68% |Google">
                     </div>
                 </div>
             </li>
@@ -147,9 +144,9 @@
             </li>
             <li class="list-item">
                 <div class="container">
-                    <a href="https://www.coursera.org/account/accomplishments/verify/QU6EE2J63XZA" class="link">SQL for Data Science| Grade: 99.66% | University of California, Davis</a>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/QU6EE2J63XZA" class="link">SQL for Data Science | Grade: 99.66% | University of California, Davis</a>
                     <div class="certificate">
-                        <img src="assets/sqlD.png" alt="SQL for Data Science| Grade: 99.66% | University of California, Davis">
+                        <img src="assets/sqlD.png" alt="SQL for Data Science | Grade: 99.66% | University of California, Davis">
                     </div>
                 </div>
             </li>
@@ -209,7 +206,6 @@
                     </div>
                 </div>
             </li>
-           
         </ul>
     </main>
     <footer>
